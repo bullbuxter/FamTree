@@ -1,0 +1,6 @@
+.navbar {
+  background-color: rgba(0,0,0,0.2);
+}
+.navbar.transparent {
+  background-color: transparent;
+}

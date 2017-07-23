@@ -1,0 +1,22 @@
+.family_item {
+  background-color: rgba(0,0,0,0.4);
+  border: 1px solid transparent;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: all;
+}
+.family_item_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.family_item:hover {
+  background-color: rgba(0,0,0,0.6);
+  border: 1px solid white;
+}

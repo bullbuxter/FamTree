@@ -1,0 +1,25 @@
+.member-search {
+  width: 75%;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+.member-search .input-group-addon {
+  border-color: #4e5d6c;
+}
+.members {
+  display: flex;
+  flex-flow: row wrap;
+}
+.buttons {
+  text-align: right;
+}
+#new_member .thumbnail {
+  height: 140px;
+  width: 140px;
+  cursor: pointer;
+}
+#member_photo {
+  visibility: hidden;
+}

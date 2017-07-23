@@ -1,0 +1,13 @@
+.splash {
+  background-color: #141D27;
+  background-image: url("https://bootswatch.com/assets/img/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #FFF;
+  text-align: center;
+  background-position: 0px 0px;
+  padding: 9em 0 2em;
+}
+.splash .container {
+  height: 250px
+}

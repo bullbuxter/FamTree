@@ -1,0 +1,99 @@
+<div class="body container">
+  <div class="form-group input-group member-search">
+    <span class="input-group-addon">Family Member</span>
+    <input type="text" class="form-control" placeholder="Start typing ..."
+           (input)="onSearchChange($event.target.value)" >
+  </div>
+  <div class="form-group buttons">
+    <button type="button" class="btn btn-sm btn-success" data-toggle="modal"
+      data-target="#myModal">
+      <span class="glyphicon glyphicon-plus"></span> New Member
+    </button>
+  </div>
+  <hr />
+  <div class="row members">
+    <div class="col-sm-6 member" *ngFor="let member of members">
+
+    </div>
+  </div>
+</div>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">New family member details</h4>
+      </div>
+      <div class="modal-body">
+        <form (submit)="onSubmitNewMember()" id="new_member">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="main-img-preview">
+                  <img class="thumbnail img-preview" src="assets/img/default_user.png" title="Preview Logo"
+                       (click)="browse()" id="photo">
+                  <input type="file" id="member_photo" accept="image/x-png"
+                         (change)="uploadPhoto($event.target)">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="First name"
+                         [(ngModel)]="fName" name="fName">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Last name"
+                         [(ngModel)]="lName" name="lName">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="input-group">
+                  <span class="input-group-addon">D.O.B</span>
+                  <input type="date" class="form-control" [(ngModel)]="dob" name="dob">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="input-group">
+                  <span class="input-group-addon">Gender</span>
+                  <div class="radio-btns form-control">
+                    <label class="radio-inline">
+                      <input type="radio" [(ngModel)]="gender" name="gender" value="1">Male
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" [(ngModel)]="gender" name="gender" value="2">Female
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Select Father"
+                       (input)="onFatherChange($event.target.value)">
+              </div>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" placeholder="Select Spouse"
+                       (input)="onSpouseChange($event.target.value)">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Select Children"
+                   (input)="onChildChange($event.target.value)">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">Submit</button>
+        <button type="button" id="modal_close" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

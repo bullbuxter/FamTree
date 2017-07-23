@@ -1,0 +1,14 @@
+<div class="body">
+  <div class="container">
+    <h3>Total Families: {{families?.length}}</h3>
+    <div class="row">
+      <div class="col-sm-2" *ngFor="let family of families">
+        <div class="family_item" routerLink="/family/{{family._id}}">
+          <div class="family_item_content">
+            <h3>{{family.name}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
